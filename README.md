@@ -17,7 +17,7 @@ docker compose up -d
 
 ## Install and activate plugins
 ```shell
-docker exec -it wpd-silverstein-final -wpcli-1 bash -c " 
+docker exec -it shel-silverstein-docker-hw-wpcli-1 bash -c " 
 wp plugin delete hello ; 
 wp plugin install health-check query-monitor wpforms-lite wordpress-importer depicter --activate ;  
 "
