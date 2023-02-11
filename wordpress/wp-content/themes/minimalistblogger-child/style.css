@@ -1,0 +1,62 @@
+/*
+Theme Name: silverstein
+Author: Felicia Hoeft
+Description: My child theme for minimalistblogger
+Version: 1.0.0
+Tested up to: 6.0
+Requires PHP: 4.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
+Text Domain: silverstein
+Template: MinimalistBlogger
+Tags: theme-options, threaded-comments, translation-ready, sticky-post, footer-widgets, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-image-header, featured-images, flexible-header, right-sidebar, one-column, two-columns, news, entertainment, blog
+*/
+
+h1.entry-title, h2.entry-title {
+    font-family: 'bookman-jf-pro', serif;
+}
+
+body, code, html, kbd, pre, samp {
+    font-family: bookman-jf-pro,serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.site-branding .site-title {
+    font-family: 'bookman-jf-pro', serif;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-feature-settings: "swsh" on;
+    -webkit-font-feature-settings: "swsh" 1;
+    -moz-font-feature-settings:    "swsh" 1;
+    -ms-font-feature-settings:     "swsh" 1;
+}
+
+.primary-menu .pmenu {
+    background-image: url("images/nav-line.jpg");
+    padding-bottom: 2%;
+    background-repeat: no-repeat;
+    border-top: none;
+    border-bottom: none;
+}
+
+.main-navigation ul li a:hover {
+    color: #25523b;
+}
+
+.main-navigation ul {
+    font-family: 'bookman-jf-pro', serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.swidgets-wrap {
+    border: none;
+}
+
+.widget ul li a:hover {
+    background-color: lightgray;
+    padding: 2%;
+    border-radius: 4px;
+}
