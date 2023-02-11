@@ -13,7 +13,7 @@ services:
       # MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       # named volumes:
-      - db-shel-silverstein:/var/lib/mysql
+      - db-wpd-final:/var/lib/mysql
       # local volumes
       #- ./db/data:/var/lib/mysql
       - ./conf/mysql:/etc/mysql/conf.d
@@ -69,4 +69,4 @@ services:
 
 # named volumes:
 volumes:
-   db-shel-silverstein:
+   db-wpd-final:
