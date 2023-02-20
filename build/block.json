@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "fh/fh-events",
+  "version": "0.1.0",
+  "title": "Upcoming Events Block",
+  "category": "design",
+  "icon": "calendar-alt",
+  "description": "A block to list upcoming events.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "fh-events",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
