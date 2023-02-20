@@ -23,6 +23,11 @@ export default function save({attributes}) {
 				className="title"
 				value={attributes.title}
 			/>
+			<div className="event-profile">
+				<div className="event-photo">
+					<img src={attributes.imgUrl} alt={"Photo of ______"} />
+				</div>
+			</div>
 		</div>
 	);
 }

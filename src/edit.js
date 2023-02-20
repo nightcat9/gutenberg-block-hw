@@ -41,7 +41,7 @@ export default function Edit({attributes, setAttributes}) {
 				placeholder={ __( 'Heading...' ) }
 			/>
 			<div className="event-profile">
-				<div className="photo">
+				<div className="event-photo">
 					<MediaUploadCheck>
 						<MediaUpload
 							onSelect={(media) => setAttributes({imgUrl: media.sizes.medium.url})
