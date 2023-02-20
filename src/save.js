@@ -31,8 +31,8 @@ export default function save({attributes}) {
 				<div className="text">
 					<p className="eventdetails">{attributes.eventdetails}</p>
 					<p className="eventlocation">{attributes.eventlocation}</p>
+					<p className="eventdate">{attributes.eventdate}</p>
 				</div>
-
 			</div>
 		</div>
 	);

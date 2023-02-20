@@ -61,7 +61,6 @@ function Edit(_ref) {
     attributes,
     setAttributes
   } = _ref;
-  const [date, setDate] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(new Date());
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "h2",
     value: attributes.title,
@@ -106,8 +105,10 @@ function Edit(_ref) {
     }),
     className: "locationdetails"
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.DateTimePicker, {
-    currentDate: date,
-    onChange: newDate => setDate(newDate),
+    currentDate: attributes.eventdate,
+    onChange: eventdate => setAttributes({
+      eventdate
+    }),
     is12Hour: true,
     __nextRemoveHelpButton: true,
     __nextRemoveResetButton: true
@@ -223,7 +224,9 @@ function save(_ref) {
     className: "eventdetails"
   }, attributes.eventdetails), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "eventlocation"
-  }, attributes.eventlocation))));
+  }, attributes.eventlocation), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "eventdate"
+  }, attributes.eventdate))));
 }
 
 /***/ }),
@@ -308,7 +311,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"fh/fh-events","version":"0.1.0","title":"Upcoming Events Block","category":"design","icon":"calendar-alt","description":"A block to list upcoming events.","supports":{"html":false},"textdomain":"fh-events","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","attributes":{"title":{"type":"string","source":"html","selector":".title","default":"Event Title"},"imgUrl":{"type":"string","default":"https://placehold.it/300"},"eventdetails":{"type":"string","source":"text","selector":".eventdetails"},"eventlocation":{"type":"string","source":"text","selector":".eventlocation"}}}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"fh/fh-events","version":"0.1.0","title":"Upcoming Events Block","category":"design","icon":"calendar-alt","description":"A block to list upcoming events.","supports":{"html":false},"textdomain":"fh-events","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","attributes":{"title":{"type":"string","source":"html","selector":".title","default":"Event Title"},"imgUrl":{"type":"string","default":"https://placehold.it/300"},"eventdetails":{"type":"string","source":"text","selector":".eventdetails"},"eventlocation":{"type":"string","source":"text","selector":".eventlocation"},"eventdate":{"type":"string"}}}');
 
 /***/ })
 

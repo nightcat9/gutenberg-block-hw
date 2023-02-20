@@ -33,7 +33,7 @@ import './editor.scss';
  * @return {WPElement} Element to render.
  */
 export default function Edit({attributes, setAttributes}) {
-	const [ date, setDate ] = useState( new Date() );
+
 	return (
 		<div { ...useBlockProps() }>
 			<RichText
@@ -70,13 +70,13 @@ export default function Edit({attributes, setAttributes}) {
 						className="locationdetails"
 					/>
 				</div>
-				<DateTimePicker
-					currentDate={ date }
-					onChange={ ( newDate ) => setDate( newDate ) }
-					is12Hour={ true }
-					__nextRemoveHelpButton
-					__nextRemoveResetButton
-				/>
+					<DateTimePicker
+						currentDate={ attributes.eventdate }
+						onChange={eventdate => setAttributes({eventdate})}
+						is12Hour={ true }
+						__nextRemoveHelpButton
+						__nextRemoveResetButton
+					/>
 			</div>
 		</div>
 	);
