@@ -40,17 +40,16 @@ export default function Edit({attributes, setAttributes}) {
 				onChange={ ( title ) => setAttributes( { title } ) }
 				placeholder={ __( 'Heading...' ) }
 			/>
-			<div className="event-details">
-				<div class="photo">
+			<div className="event-profile">
+				<div className="photo">
 					<MediaUploadCheck>
 						<MediaUpload
-							onSelect={ ( media ) =>
-								console.log( 'selected ' + media.length )
+							onSelect={(media) => setAttributes({imgUrl: media.sizes.medium.url})
 							}
-							allowedTypes={ ['image'] }
-							render={ ( { open } ) => (
-								<img src={attributes.imgUrl} onClick={ open } />
-							) }
+							allowedTypes={['image']}
+							render={({open}) => (
+								<img src={attributes.imgUrl} onClick={open}/>
+							)}
 						/>
 					</MediaUploadCheck>
 				</div>

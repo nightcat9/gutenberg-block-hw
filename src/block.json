@@ -20,6 +20,10 @@
 		"source": "html",
 		"selector": ".title",
 		"default": "Event Title"
+	  },
+	  "imgUrl": {
+		"type": "string",
+		"default": "https://placehold.it/300"
 	  }
 	}
 }

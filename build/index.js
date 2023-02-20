@@ -67,11 +67,13 @@ function Edit(_ref) {
     }),
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Heading...')
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "event-details"
+    className: "event-profile"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    class: "photo"
+    className: "photo"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaUpload, {
-    onSelect: media => console.log('selected ' + media.length),
+    onSelect: media => setAttributes({
+      imgUrl: media.sizes.medium.url
+    }),
     allowedTypes: ['image'],
     render: _ref2 => {
       let {
@@ -256,7 +258,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"fh/fh-events","version":"0.1.0","title":"Upcoming Events Block","category":"design","icon":"calendar-alt","description":"A block to list upcoming events.","supports":{"html":false},"textdomain":"fh-events","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","attributes":{"title":{"type":"string","source":"html","selector":".title","default":"Event Title"}}}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"fh/fh-events","version":"0.1.0","title":"Upcoming Events Block","category":"design","icon":"calendar-alt","description":"A block to list upcoming events.","supports":{"html":false},"textdomain":"fh-events","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","attributes":{"title":{"type":"string","source":"html","selector":".title","default":"Event Title"},"imgUrl":{"type":"string","default":"https://placehold.it/300"}}}');
 
 /***/ })
 
