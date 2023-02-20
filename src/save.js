@@ -6,6 +6,7 @@
  */
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 
+
 /**
  * The save function defines the way in which the different attributes should
  * be combined into the final markup, which is then serialized by the block
@@ -27,6 +28,11 @@ export default function save({attributes}) {
 				<div className="event-photo">
 					<img src={attributes.imgUrl} alt={"Photo of ______"} />
 				</div>
+				<div className="text">
+					<p className="eventdetails">{attributes.eventdetails}</p>
+					<p className="eventlocation">{attributes.eventlocation}</p>
+				</div>
+
 			</div>
 		</div>
 	);

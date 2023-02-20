@@ -18,7 +18,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
 
 /**
  * Retrieves the translation of text.
@@ -33,6 +35,8 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
+
+
 
 
 
@@ -57,6 +61,7 @@ function Edit(_ref) {
     attributes,
     setAttributes
   } = _ref;
+  const [date, setDate] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(new Date());
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "h2",
     value: attributes.title,
@@ -84,7 +89,29 @@ function Edit(_ref) {
         onClick: open
       });
     }
-  })))));
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "text"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PlainText, {
+    placeholder: "Event Details",
+    value: attributes.eventdetails,
+    onChange: eventdetails => setAttributes({
+      eventdetails
+    }),
+    className: "eventdetails"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PlainText, {
+    placeholder: "Waukesha",
+    value: attributes.eventlocation,
+    onChange: eventlocation => setAttributes({
+      eventlocation
+    }),
+    className: "locationdetails"
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.DateTimePicker, {
+    currentDate: date,
+    onChange: newDate => setDate(newDate),
+    is12Hour: true,
+    __nextRemoveHelpButton: true,
+    __nextRemoveResetButton: true
+  })));
 }
 
 /***/ }),
@@ -190,7 +217,13 @@ function save(_ref) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: attributes.imgUrl,
     alt: "Photo of ______"
-  }))));
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "text"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "eventdetails"
+  }, attributes.eventdetails), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "eventlocation"
+  }, attributes.eventlocation))));
 }
 
 /***/ }),
@@ -239,6 +272,16 @@ module.exports = window["wp"]["blocks"];
 
 /***/ }),
 
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ (function(module) {
+
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
 /***/ "@wordpress/element":
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
@@ -265,7 +308,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"fh/fh-events","version":"0.1.0","title":"Upcoming Events Block","category":"design","icon":"calendar-alt","description":"A block to list upcoming events.","supports":{"html":false},"textdomain":"fh-events","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","attributes":{"title":{"type":"string","source":"html","selector":".title","default":"Event Title"},"imgUrl":{"type":"string","default":"https://placehold.it/300"}}}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"fh/fh-events","version":"0.1.0","title":"Upcoming Events Block","category":"design","icon":"calendar-alt","description":"A block to list upcoming events.","supports":{"html":false},"textdomain":"fh-events","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","attributes":{"title":{"type":"string","source":"html","selector":".title","default":"Event Title"},"imgUrl":{"type":"string","default":"https://placehold.it/300"},"eventdetails":{"type":"string","source":"text","selector":".eventdetails"},"eventlocation":{"type":"string","source":"text","selector":".eventlocation"}}}');
 
 /***/ })
 

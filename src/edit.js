@@ -12,7 +12,9 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
+import { MediaUpload, MediaUploadCheck, PlainText } from '@wordpress/block-editor';
+import { DateTimePicker } from '@wordpress/components';
+import { useState } from '@wordpress/element';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -31,6 +33,7 @@ import './editor.scss';
  * @return {WPElement} Element to render.
  */
 export default function Edit({attributes, setAttributes}) {
+	const [ date, setDate ] = useState( new Date() );
 	return (
 		<div { ...useBlockProps() }>
 			<RichText
@@ -53,6 +56,27 @@ export default function Edit({attributes, setAttributes}) {
 						/>
 					</MediaUploadCheck>
 				</div>
+				<div className="text">
+					<PlainText
+						placeholder="Event Details"
+						value={attributes.eventdetails}
+						onChange={eventdetails => setAttributes({eventdetails})}
+						className="eventdetails"
+					/>
+					<PlainText
+						placeholder="Waukesha"
+						value={attributes.eventlocation}
+						onChange={eventlocation => setAttributes({eventlocation})}
+						className="locationdetails"
+					/>
+				</div>
+				<DateTimePicker
+					currentDate={ date }
+					onChange={ ( newDate ) => setDate( newDate ) }
+					is12Hour={ true }
+					__nextRemoveHelpButton
+					__nextRemoveResetButton
+				/>
 			</div>
 		</div>
 	);

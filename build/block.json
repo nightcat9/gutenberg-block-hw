@@ -24,6 +24,16 @@
     "imgUrl": {
       "type": "string",
       "default": "https://placehold.it/300"
+    },
+    "eventdetails": {
+      "type": "string",
+      "source": "text",
+      "selector": ".eventdetails"
+    },
+    "eventlocation": {
+      "type": "string",
+      "source": "text",
+      "selector": ".eventlocation"
     }
   }
 }
