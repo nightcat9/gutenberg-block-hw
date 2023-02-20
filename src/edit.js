@@ -11,7 +11,8 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,13 +30,31 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit({attributes, setAttributes}) {
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Upcoming Events Block – hello from the editor!',
-				'fh-events'
-			) }
-		</p>
+		<div { ...useBlockProps() }>
+			<RichText
+				tagName="h2"
+				value={ attributes.title }
+				allowedFormats={ [ 'core/bold', 'core/italic' ] } // Allow the content to be made bold or italic, but do not allow othe formatting options
+				onChange={ ( title ) => setAttributes( { title } ) }
+				placeholder={ __( 'Heading...' ) }
+			/>
+			<div className="event-details">
+				<div class="photo">
+					<MediaUploadCheck>
+						<MediaUpload
+							onSelect={ ( media ) =>
+								console.log( 'selected ' + media.length )
+							}
+							allowedTypes={ ['image'] }
+							render={ ( { open } ) => (
+								<img src={attributes.imgUrl} onClick={ open } />
+							) }
+						/>
+					</MediaUploadCheck>
+				</div>
+			</div>
+		</div>
 	);
 }
