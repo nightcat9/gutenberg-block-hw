@@ -9,4 +9,28 @@
 	background-color: #747474;
 	color: #fff;
 	padding: 2px;
+  	border: .1em solid #aaaaaa;
+  	border-radius: .5em;
+  	margin: 0 auto;
+
+
+  &.bg-teal, &.tx-teal {
+	background-color: #008080;
+  }
+
+  &.bg-dark-slate-gray, &.tx-dark-slate-gray {
+	background-color: #2F4F4F;
+  }
+
+  &.bg-midnight-blue, &.tx-midnight-blue {
+	background-color: #191970;
+  }
+
+  &.bg-misty-rose, &.tx-misty-rose {
+	background-color: #FFE4E1;
+  }
+
+  &.bg-white, &.tx-white {
+	background-color: white;
+  }
 }

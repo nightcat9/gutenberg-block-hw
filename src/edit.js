@@ -14,7 +14,6 @@ import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { MediaUpload, MediaUploadCheck, PlainText } from '@wordpress/block-editor';
 import { DateTimePicker } from '@wordpress/components';
-import { useState } from '@wordpress/element';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -23,6 +22,7 @@ import { useState } from '@wordpress/element';
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.scss';
+import {BlockSettings} from "./BlockSettings";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -34,8 +34,14 @@ import './editor.scss';
  */
 export default function Edit({attributes, setAttributes}) {
 
+	let divStyles = {
+		borderColor: attributes.borderColor,
+		color: attributes.textColor,
+	}
+
 	return (
-		<div { ...useBlockProps() }>
+		<div { ...useBlockProps({className: attributes.backgroundColorClass, color: attributes.textColor, style: divStyles}) }>
+			<BlockSettings attributes={attributes} setAttributes={setAttributes} />
 			<RichText
 				tagName="h2"
 				value={ attributes.title }

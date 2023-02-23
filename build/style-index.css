@@ -11,6 +11,24 @@
   background-color: #747474;
   color: #fff;
   padding: 2px;
+  border: 0.1em solid #aaaaaa;
+  border-radius: 0.5em;
+  margin: 0 auto;
+}
+.wp-block-fh-fh-events.bg-teal, .wp-block-fh-fh-events.tx-teal {
+  background-color: #008080;
+}
+.wp-block-fh-fh-events.bg-dark-slate-gray, .wp-block-fh-fh-events.tx-dark-slate-gray {
+  background-color: #2F4F4F;
+}
+.wp-block-fh-fh-events.bg-midnight-blue, .wp-block-fh-fh-events.tx-midnight-blue {
+  background-color: #191970;
+}
+.wp-block-fh-fh-events.bg-misty-rose, .wp-block-fh-fh-events.tx-misty-rose {
+  background-color: #FFE4E1;
+}
+.wp-block-fh-fh-events.bg-white, .wp-block-fh-fh-events.tx-white {
+  background-color: white;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

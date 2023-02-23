@@ -2,6 +2,93 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/BlockSettings.js":
+/*!******************************!*\
+  !*** ./src/BlockSettings.js ***!
+  \******************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "BlockSettings": function() { return /* binding */ BlockSettings; }
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+class BlockSettings extends (react__WEBPACK_IMPORTED_MODULE_1___default().Component) {
+  render() {
+    let {
+      attributes,
+      setAttributes
+    } = this.props;
+    let settings = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_4__.select)('core/editor').getEditorSettings();
+    console.log('SETTINGS!', settings);
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+      title: "Basic",
+      initialOpen: true
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
+      label: "Calendar Background Color",
+      value: attributes.backgroundColorClass,
+      onChange: backgroundColorClass => {
+        setAttributes({
+          backgroundColorClass
+        });
+      },
+      options: [{
+        value: '',
+        label: 'Default'
+      }, {
+        value: 'bg-teal',
+        label: 'Teal'
+      }, {
+        value: 'bg-dark-slate-gray',
+        label: 'Dark Slate Gray'
+      }, {
+        value: 'bg-misty-rose',
+        label: 'Misty Rose'
+      }, {
+        value: 'bg-midnight-blue',
+        label: 'Midnight Blue'
+      }, {
+        value: 'bg-white',
+        label: 'White'
+      }]
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, "Border Color"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPalette, {
+      colors: settings.colors,
+      disableCustomColors: settings.disableCustomColors,
+      value: attributes.borderColor,
+      onChange: borderColor => {
+        setAttributes({
+          borderColor
+        });
+      }
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, "Text Color"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPalette, {
+      colors: settings.colors,
+      disableCustomColors: settings.disableCustomColors,
+      value: attributes.textColor,
+      onChange: textColor => {
+        setAttributes({
+          textColor
+        });
+      }
+    }))));
+  }
+}
+
+/***/ }),
+
 /***/ "./src/edit.js":
 /*!*********************!*\
   !*** ./src/edit.js ***!
@@ -21,6 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
+/* harmony import */ var _BlockSettings__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./BlockSettings */ "./src/BlockSettings.js");
 
 /**
  * Retrieves the translation of text.
@@ -39,13 +127,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
+
 
 
 /**
@@ -61,7 +149,18 @@ function Edit(_ref) {
     attributes,
     setAttributes
   } = _ref;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+  let divStyles = {
+    borderColor: attributes.borderColor,
+    color: attributes.textColor
+  };
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+    className: attributes.backgroundColorClass,
+    color: attributes.textColor,
+    style: divStyles
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_BlockSettings__WEBPACK_IMPORTED_MODULE_5__.BlockSettings, {
+    attributes: attributes,
+    setAttributes: setAttributes
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     tagName: "h2",
     value: attributes.title,
     allowedFormats: ['core/bold', 'core/italic'] // Allow the content to be made bold or italic, but do not allow othe formatting options
@@ -207,7 +306,16 @@ function save(_ref) {
   let {
     attributes
   } = _ref;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+  let divStyles = {
+    borderColor: attributes.borderColor,
+    backgroundColorClass: attributes.backgroundColorClass,
+    color: attributes.textColor
+  };
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
+    className: attributes.backgroundColorClass,
+    color: attributes.textColor,
+    style: divStyles
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     tagName: "div",
     className: "title",
     value: attributes.title
@@ -255,6 +363,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "react":
+/*!************************!*\
+  !*** external "React" ***!
+  \************************/
+/***/ (function(module) {
+
+module.exports = window["React"];
+
+/***/ }),
+
 /***/ "@wordpress/block-editor":
 /*!*************************************!*\
   !*** external ["wp","blockEditor"] ***!
@@ -285,6 +403,16 @@ module.exports = window["wp"]["components"];
 
 /***/ }),
 
+/***/ "@wordpress/data":
+/*!******************************!*\
+  !*** external ["wp","data"] ***!
+  \******************************/
+/***/ (function(module) {
+
+module.exports = window["wp"]["data"];
+
+/***/ }),
+
 /***/ "@wordpress/element":
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
@@ -311,7 +439,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"fh/fh-events","version":"0.1.0","title":"Upcoming Events Block","category":"design","icon":"calendar-alt","description":"A block to list upcoming events.","supports":{"html":false},"textdomain":"fh-events","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","attributes":{"title":{"type":"string","source":"html","selector":".title","default":"Event Title"},"imgUrl":{"type":"string","default":"https://placehold.it/300"},"eventdetails":{"type":"string","source":"text","selector":".eventdetails"},"eventlocation":{"type":"string","source":"text","selector":".eventlocation"},"eventdate":{"type":"string"}}}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"fh/fh-events","version":"0.1.0","title":"Upcoming Events Block","category":"design","icon":"calendar-alt","description":"A block to list upcoming events.","supports":{"html":false},"textdomain":"fh-events","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","attributes":{"title":{"type":"string","source":"html","selector":".title","default":"Event Title"},"imgUrl":{"type":"string","default":"https://placehold.it/300"},"eventdetails":{"type":"string","source":"text","selector":".eventdetails"},"eventlocation":{"type":"string","source":"text","selector":".eventlocation"},"eventdate":{"type":"string"},"backgroundColorClass":{"type":"string"},"borderColor":{"type":"string"},"textColor":{"type":"string"}}}');
 
 /***/ })
 

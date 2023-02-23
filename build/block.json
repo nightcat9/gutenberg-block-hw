@@ -37,6 +37,15 @@
     },
     "eventdate": {
       "type": "string"
+    },
+    "backgroundColorClass": {
+      "type": "string"
+    },
+    "borderColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
     }
   }
 }

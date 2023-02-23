@@ -17,8 +17,13 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
  * @return {WPElement} Element to render.
  */
 export default function save({attributes}) {
+
+	let divStyles = {
+		borderColor: attributes.borderColor, backgroundColorClass: attributes.backgroundColorClass, color: attributes.textColor
+	}
+
 	return (
-		<div { ...useBlockProps.save() }>
+		<div { ...useBlockProps.save({className: attributes.backgroundColorClass, color: attributes.textColor, style: divStyles}) }>
 			<RichText.Content
 				tagName="div"
 				className="title"
