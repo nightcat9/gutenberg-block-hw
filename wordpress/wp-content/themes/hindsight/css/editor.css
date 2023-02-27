@@ -1,0 +1,49 @@
+.has-primary-blue-color {
+  color: #0000ff;
+}
+
+.has-primary-blue-background-color {
+  background-color: #0000ff;
+}
+
+.has-warning-color {
+  color: #ff0000;
+}
+
+.has-warning-background-color {
+  background-color: #ff0000;
+}
+
+.has-success-color {
+  color: #00ff00;
+}
+
+.has-success-background-color {
+  background-color: #00ff00;
+}
+
+.has-purple-color {
+  color: #b491c8;
+}
+
+.has-purple-background-color {
+  background-color: #b491c8;
+}
+
+.has-gray-color {
+  color: #707070;
+}
+
+.has-gray-background-color {
+  background-color: #707070;
+}
+
+.wp-block {
+  border: 0.5px dotted gray;
+}
+
+h3.wp-block {
+  border-bottom: 3px solid #0000ff;
+}
+
+/*# sourceMappingURL=editor.css.map */

@@ -1,0 +1,15 @@
+{
+  "name": "hindsight",
+  "version": "1.0.0",
+  "description": "Child theme for 2020",
+  "scripts": {
+    "start": "sass scss/:css/ --watch",
+    "watch": "sass scss/:css/ --watch",
+    "build": "sass scss/:css/ --style=compressed"
+  },
+  "author": "Felicia Hoeft",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.58.3"
+  }
+}

@@ -1,0 +1,10 @@
+@each $name, $hex in $theme-colors {
+
+	.has-#{$name}-color{
+		color: $hex;
+	}
+
+	.has-#{$name}-background-color{
+		background-color: $hex;
+	}
+}

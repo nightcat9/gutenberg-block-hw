@@ -1,0 +1,21 @@
+@import "../../twentytwenty/style";
+
+@import "variables";
+@import "colors";
+
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+// custom css
+body, .entry-content {
+	font-family: 'Lato', sans-serif;
+}
+
+h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+	font-family: 'Reggae One', 'sans-serif';
+}
+
+h3 {
+	border-bottom: 3px solid $primary-blue;
+}
+
+
