@@ -32,7 +32,7 @@ import './editor.scss';
 export default function Edit() {
 	return (
 		<p { ...useBlockProps() }>
-			{ __( 'Events Block – hello from the editor!', 'fh-events-card' ) }
+			About the Author
 		</p>
 	);
 }

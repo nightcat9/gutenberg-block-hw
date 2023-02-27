@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "fh/fh-testimonial",
+  "version": "0.1.0",
+  "title": "Testimonial Block",
+  "category": "design",
+  "icon": "format-quote",
+  "description": "A block to show testimonials.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "fh-testimonial",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "keywords": [
+    "reviews",
+    "docker"
+  ],
+  "attributes": {
+    "quote": {
+      "type": "string",
+      "source": "html",
+      "selector": ".quote"
+    },
+    "stars": {
+      "type": "number",
+      "default": 5
+    },
+    "imgUrl": {
+      "type": "string",
+      "default": "https://placehold.it/150"
+    },
+    "author": {
+      "type": "string",
+      "source": "text",
+      "selector": ".author"
+    },
+    "location": {
+      "type": "string",
+      "source": "text",
+      "selector": ".location"
+    },
+    "backgroundColorClass": {
+      "type": "string"
+    },
+    "borderColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
+    }
+  }
+}

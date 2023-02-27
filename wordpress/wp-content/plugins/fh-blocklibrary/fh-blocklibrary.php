@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name:       Events Block
- * Description:       A block to share upcoming events.
+ * Plugin Name:       FH Block Library
+ * Description:       Lots-o-blocks
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           0.1.0
  * Author:            Felicia Hoeft
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       fh-events-card
+ * Text Domain:       fh-blocklibrary
  *
  * @package           fh
  */
@@ -20,7 +20,9 @@
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function fh_fh_events_card_block_init() {
-	register_block_type( __DIR__ . '/build' );
+function fh_fh_blocklibrary_block_init() {
+	register_block_type( __DIR__ . '/build/blocks/dynablock' );
+	register_block_type( __DIR__ . '/build/blocks/testimonial' );
+	register_block_type( __DIR__ . '/build/filters/border-control' );
 }
-add_action( 'init', 'fh_fh_events_card_block_init' );
+add_action( 'init', 'fh_fh_blocklibrary_block_init' );

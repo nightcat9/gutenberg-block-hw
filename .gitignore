@@ -23,6 +23,9 @@
 # … except our stuff.
 !/wordpress/wp-content/plugins/akismet
 !/wordpress/wp-content/plugins/authors-work
+!/wordpress/wp-content/plugins/fh-blocklibrary
+!/wordpress/wp-content/plugins/fh-events
+!/wordpress/wp-content/plugins/fh-testimonial
 !/wordpress/wp-content/themes/minimalistblogger
 !/wordpress/wp-content/themes/minimalistblogger-child
 

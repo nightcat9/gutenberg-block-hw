@@ -1,17 +1,18 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "fh/fh-events-card",
+	"name": "fh/fh-blocklibrary",
 	"version": "0.1.0",
-	"title": "Events Block",
+	"title": "Dynamic Block",
 	"category": "design",
-	"icon": "calendar-alt",
-	"description": "A block to share upcoming events.",
+	"icon": "smiley",
+	"description": "First dynamic block",
 	"supports": {
 		"html": false
 	},
-	"textdomain": "fh-events-card",
+	"textdomain": "fh-blocklibrary",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
 }
