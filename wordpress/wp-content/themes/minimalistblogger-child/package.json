@@ -1,0 +1,24 @@
+{
+  "name": "minimalistblogger-child",
+  "version": "1.0.0",
+  "description": "Child theme for minimalistblogger",
+  "scripts": {
+    "start": "sass scss/:css/ --watch",
+    "watch": "sass scss/:css/ --watch",
+    "build": "sass scss/:css/ --style=compressed"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightcat9/gutenberg-block-hw.git"
+  },
+  "author": "Felicia Hoeft",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nightcat9/gutenberg-block-hw/issues"
+  },
+  "homepage": "https://github.com/nightcat9/gutenberg-block-hw#readme",
+  "devDependencies": {
+    "sass": "^1.58.3"
+  }
+}

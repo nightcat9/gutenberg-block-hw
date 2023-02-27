@@ -1,30 +1,30 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Coverage directory used by tools like istanbul
-coverage
-
-# Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
-
-# Dependency directories
-node_modules/
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Output of `npm pack`
-*.tgz
-
-# Output of `wp-scripts plugin-zip`
-*.zip
-
-# dotenv environment variables file
+/db/data
 .env
+.idea
+
+# Exclude everything in WP root…
+/wordpress/*
+
+# … except wp-content.
+!/wordpress/wp-content
+
+# Now exclude everything in wp-content …
+/wordpress/wp-content/*
+
+# … except plugins, themes, and uploads …
+!/wordpress/wp-content/plugins
+!/wordpress/wp-content/themes
+!/wordpress/wp-content/uploads
+
+# Now exclude everything in plugins and themes …
+/wordpress/wp-content/plugins/*
+/wordpress/wp-content/themes/*
+
+# … except our stuff.
+!/wordpress/wp-content/plugins/akismet
+!/wordpress/wp-content/plugins/authors-work
+!/wordpress/wp-content/plugins/fh-blocklibrary
+!/wordpress/wp-content/plugins/fh-events
+!/wordpress/wp-content/plugins/fh-testimonial
+!/wordpress/wp-content/themes/minimalistblogger
+!/wordpress/wp-content/themes/minimalistblogger-child
