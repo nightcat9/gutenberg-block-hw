@@ -1,1 +1,53 @@
-.has-dark-slate-gray-color{color:#2f4f4f}.has-dark-slate-gray-background-color{background-color:#2f4f4f}.has-misty-rose-color{color:#ffe4e1}.has-misty-rose-background-color{background-color:#ffe4e1}.has-midnight-blue-color{color:#191970}.has-midnight-blue-background-color{background-color:#191970}.has-teal-color{color:teal}.has-teal-background-color{background-color:teal}h2.wp-block{border-bottom:3px solid teal}/*# sourceMappingURL=editor.css.map */
+.has-taupe-color {
+  color: #50423d;
+}
+
+.has-taupe-background-color {
+  background-color: #50423d;
+}
+
+.has-beaver-color {
+  color: #8d7361;
+}
+
+.has-beaver-background-color {
+  background-color: #8d7361;
+}
+
+.has-dun-color {
+  color: #c9bbae;
+}
+
+.has-dun-background-color {
+  background-color: #c9bbae;
+}
+
+.has-isabelline-color {
+  color: #eeebe7;
+}
+
+.has-isabelline-background-color {
+  background-color: #eeebe7;
+}
+
+.has-cool-gray-color {
+  color: #8b8da0;
+}
+
+.has-cool-gray-background-color {
+  background-color: #8b8da0;
+}
+
+.has-white-color {
+  color: white;
+}
+
+.has-white-background-color {
+  background-color: white;
+}
+
+h2.wp-block {
+  border-bottom: 3px solid #8b8da0;
+}
+
+/*# sourceMappingURL=editor.css.map */

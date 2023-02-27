@@ -16,24 +16,29 @@ add_action('wp_enqueue_scripts', 'silverstein_enqueue_styles');
 add_action('after_setup_theme', function (){
     add_theme_support( 'editor-color-palette', array(
         array(
-            'name'  => 'Dark Slate Gray',
-            'slug'  => 'dark-slate-gray',
-            'color' => '#2f4f4f',
+            'name'  => 'Taupe',
+            'slug'  => 'taupe',
+            'color' => '#50423d',
         ),
         array(
-            'name'  => 'Misty Rose',
-            'slug'  => 'misty-rose',
-            'color' => '#ffe4e1',
+            'name'  => 'Beaver',
+            'slug'  => 'beaver',
+            'color' => '#8d7361',
         ),
         array(
-            'name'  => 'Midnight Blue',
-            'slug'  => 'midnight-blue',
-            'color' => '#191970',
+            'name'  => 'Dun',
+            'slug'  => 'dun',
+            'color' => '#c9bbae',
         ),
         array(
-            'name'  => 'Teal',
-            'slug'  => 'teal',
-            'color' => '#008080',
+            'name'  => 'Isabelline',
+            'slug'  => 'isabelline',
+            'color' => '#eeebe7',
+        ),
+        array(
+            'name'  => 'Cool Gray',
+            'slug'  => 'cool-gray',
+            'color' => '#8b8da0',
         ),
     ) );
 
