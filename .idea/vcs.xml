@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/wordpress/wp-content/plugins/fh-events-card" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/wordpress/wp-content/plugins/fh-testimonial" vcs="Git" />
   </component>
 </project>

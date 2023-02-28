@@ -23,6 +23,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./editor.scss */ "./src/filters/border-control/editor.scss");
+
 
 
 
@@ -71,6 +73,7 @@ function blockWrapper(WrappedBlock) {
           value: 'dotted'
         }]
       })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RangeControl, {
+        className: "border-width",
         label: "Border Width",
         value: attributes.borderWidth,
         onChange: borderWidth => setAttributes({
@@ -80,6 +83,7 @@ function blockWrapper(WrappedBlock) {
         min: 0.5,
         max: 5
       })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RangeControl, {
+        className: "border-width",
         label: "Border Radius",
         value: attributes.borderRadius,
         onChange: borderRadius => setAttributes({
@@ -188,6 +192,18 @@ function addBorderAttributes(settings, name) {
   return settings;
 }
 (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__.addFilter)('blocks.registerBlockType', 'fh-blocklibrary/border-control/add-border-attributes', addBorderAttributes);
+
+/***/ }),
+
+/***/ "./src/filters/border-control/editor.scss":
+/*!************************************************!*\
+  !*** ./src/filters/border-control/editor.scss ***!
+  \************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 

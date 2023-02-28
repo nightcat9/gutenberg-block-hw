@@ -6,5 +6,6 @@
 	"title": "Border Control",
 	"description": "Adds borders all blocks",
 	"textdomain": "fh-blocklibrary",
-	"editorScript": "file:./index.js"
+	"editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css" 
 }
